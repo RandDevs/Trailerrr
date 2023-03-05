@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Trailerrr/static/css/main.5d420086.css",
-    "main.js": "/Trailerrr/static/js/main.3b4500e2.js",
+    "main.css": "/Trailerrr/static/css/main.8098f6d3.css",
+    "main.js": "/Trailerrr/static/js/main.490f5fe2.js",
     "static/media/interstellar.jpeg": "/Trailerrr/static/media/interstellar.1b6b336cf1e4e17a6816.jpeg",
     "static/media/mk.jpg": "/Trailerrr/static/media/mk.4dcb33e01271febf6bf3.jpg",
     "static/media/suicideSquad.webp": "/Trailerrr/static/media/suicideSquad.b16ca5f951a92f0a7253.webp",
@@ -24,11 +24,11 @@
     "static/media/mama.jpg": "/Trailerrr/static/media/mama.2c15a939b2b515e6275b.jpg",
     "static/media/the-purge.webp": "/Trailerrr/static/media/the-purge.8ba59e74c383ceee312f.webp",
     "index.html": "/Trailerrr/index.html",
-    "main.5d420086.css.map": "/Trailerrr/static/css/main.5d420086.css.map",
-    "main.3b4500e2.js.map": "/Trailerrr/static/js/main.3b4500e2.js.map"
+    "main.8098f6d3.css.map": "/Trailerrr/static/css/main.8098f6d3.css.map",
+    "main.490f5fe2.js.map": "/Trailerrr/static/js/main.490f5fe2.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d420086.css",
-    "static/js/main.3b4500e2.js"
+    "static/css/main.8098f6d3.css",
+    "static/js/main.490f5fe2.js"
   ]
 }
