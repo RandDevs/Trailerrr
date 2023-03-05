@@ -35,20 +35,6 @@ export default function Content({
 		setLoading(false);
 		return trailer;
 	}
-	// if (
-	// 	getData === null &&
-	// 	getMovieDetails === null &&
-	// 	getTrailerVideo === null
-	// ) {
-	// 	return (
-	// 		<LandingPage
-	// 			setMovieDetails={setMovieDetails}
-	// 			setTrailerVideo={setTrailerVideo}
-	// 			fetchMovieDetails={fetchMovieDetails}
-	// 			fetchTrailerVideo={fetchTrailerVideo}
-	// 		/>
-	// 	);
-	// }
 
 	return (
 		<main>
