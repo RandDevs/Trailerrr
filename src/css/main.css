@@ -1,0 +1,202 @@
+main {
+	margin-top: 60px;
+	width: 100%;
+	transition: 0.3s;
+	font-family: "Poppins";
+	/* box-sizing: content-box; */
+}
+
+/* ==== Cards ==== */
+.featured {
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.featured h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--bgc);
+	transition: var(--trans);
+}
+
+.cards {
+	margin: auto;
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+	gap: 20px 15px;
+}
+
+.btn-primary {
+	background-color: var(--second-color);
+	outline: 0;
+	border: 0px;
+}
+
+.container-card {
+	width: 190px;
+	aspect-ratio: 9 / 16;
+	border-radius: 1.5em;
+	overflow: hidden;
+	margin-bottom: 0;
+	display: inline-block;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+.image img {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0;
+	object-fit: cover;
+}
+
+.card-body {
+	width: 100%;
+	color: var(--text-color);
+	background-color: var(--bgc);
+	transform: translateY(-85px);
+	z-index: 1;
+	border-top-left-radius: 1em;
+	position: relative;
+	transition: var(--trans);
+	padding: 10px 20px 20px 20px;
+}
+
+.card-body .card-title {
+	color: var(--text-color);
+	font-size: 20px;
+	padding: 4px 0;
+	font-weight: bold;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.card-body .card-year {
+	padding: 10px 0;
+	color: var(--text-color);
+}
+
+.card-body:hover {
+	transform: translateY(-85%);
+}
+
+.card-body button {
+	outline: none;
+	border-radius: 10px;
+	padding: 8px;
+	border: none;
+	background-color: var(--text-color);
+	color: var(--bgc);
+	transition: var(--trans);
+	font-size: 1em;
+	font-weight: 500;
+	margin: 15px 0;
+	cursor: pointer;
+}
+
+.card-body button:hover {
+	color: var(--text-color);
+	background-color: var(--bgc-light);
+}
+
+/* ==== Dark Mode ==== */
+body.dark .btn-hero-image button {
+	border: 2px solid var(--text-color);
+	color: var(--text-color);
+}
+
+body.dark .btn-hero-image button:hover {
+	background-color: var(--text-color);
+	color: var(--bgc);
+}
+
+body.dark .featured h1 {
+	color: var(--text-color);
+}
+
+/* TODO ==== Breakdown Handler ==== */
+@media screen and (max-width: 768px) {
+	main {
+		margin-top: 55px;
+	}
+
+	.cards {
+		padding: 25px 10px;
+		gap: 12px 10px;
+	}
+
+	.container-card {
+		width: 155px;
+		border-radius: 1em;
+	}
+
+	.card-body {
+		transform: translateY(-70px);
+	}
+
+	.card-body .card-title {
+		font-size: 16px;
+	}
+
+	.card-body .card-year {
+		font-size: 14px;
+		padding: 5px 0;
+	}
+
+	.card-body button {
+		padding: 5px 7px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.featured {
+		padding: 0 15px;
+	}
+
+	.featured h1 {
+		font-size: 16px;
+	}
+
+	.cards {
+		gap: 10px 8px;
+		padding: 25px 5px;
+	}
+
+	.container-card {
+		width: 30%;
+		border-radius: 0.8em;
+	}
+
+	.card-body {
+		padding: 5px 10px;
+		transform: translateY(-55px);
+		border-top-left-radius: 0.8em;
+	}
+
+	.card-body:hover {
+		transform: translateY(-95%);
+	}
+
+	.card-body .card-title {
+		font-size: 14px;
+	}
+	.card-body .card-year {
+		font-size: 12px;
+		padding: 2px 0;
+	}
+	.card-body button {
+		font-size: 12px;
+		padding: 5px;
+		border-radius: 6px;
+	}
+}

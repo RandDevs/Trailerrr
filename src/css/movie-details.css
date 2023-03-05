@@ -1,0 +1,240 @@
+hr {
+	margin: 10px 0;
+}
+.movie-trailer {
+	width: 100%;
+	padding-top: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+.movie-trailer iframe {
+	width: 1111px;
+	aspect-ratio: 16/9;
+}
+.movie-details-container {
+	color: var(--bgc);
+	display: flex;
+	justify-content: center;
+}
+
+.movie-detail {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 25px;
+	width: 100%;
+	height: 100%;
+}
+
+.poster-movie-detail {
+	width: 275px;
+	aspect-ratio: 16 / 9;
+}
+
+.poster-movie-detail img {
+	width: 100%;
+}
+
+.details-movie-detail {
+	width: calc(100% - 275px);
+	padding: 0 15px 15px 15px;
+	font-family: "Poppins", sans-serif;
+}
+
+.details-movie-detail .title {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.details-movie-detail .more-details {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px 0;
+	font-weight: 600;
+}
+
+.details-movie-detail .more-details p {
+	margin-right: 20px;
+}
+
+.details-movie-detail .reviews {
+	font-weight: 550;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.details-movie-detail .reviews .imdb-review {
+	color: black;
+	width: 125px;
+	height: 125px;
+	padding: 10px;
+	background-color: var(--gold-color);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.details-movie-detail .reviews .imdb-review .imdb-score {
+	width: 100%;
+	font-weight: bold;
+	font-size: 45px;
+	text-align: center;
+}
+
+.details-movie-detail .reviews .imdb-review .imdb-score-text {
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.details-movie-detail .reviews .other-reviews {
+	padding: 0 20px;
+	width: calc(100% - 125px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.details-movie-detail .reviews .other-reviews .local-score {
+	width: 100%;
+}
+
+.details-movie-detail .reviews .other-reviews .other-score {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.details-movie-detail .reviews .other-reviews .other-score div {
+	background-color: var(--bgc);
+	color: var(--text-color);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	align-items: flex-start;
+	padding: 18px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.details-movie-detail .reviews .other-reviews .other-score div h1 {
+	line-height: 30px;
+	color: var(--gold-color);
+	font-size: 22px;
+	font-weight: 600;
+	text-shadow: 0.5px 0.5px 2px black;
+}
+
+.details-movie-detail .reviews .other-reviews .other-score div p {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.details-movie-detail .description p {
+	text-align: justify;
+	text-indent: 20px;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+.details-movie-detail .other-movie-info {
+	width: 100%;
+	padding: 20px 40px;
+}
+
+.details-movie-detail .other-movie-info p {
+	font-weight: 500;
+
+	line-height: 20px;
+	margin: 5px 0;
+}
+
+.details-movie-detail button:hover {
+	background-color: var(--bgc-light);
+}
+
+/* DARK MODE */
+body.dark .details-movie-detail .title,
+body.dark .details-movie-detail .more-details,
+body.dark .details-movie-detail .other-movie-info,
+body.dark .details-movie-detail .description {
+	color: var(--text-color);
+}
+
+@media screen and (max-width: 768px) {
+	.movie-detail {
+		flex-direction: column;
+		align-items: center;
+	}
+	.poster-movie-detail {
+		width: 250px;
+		padding-bottom: 25px;
+	}
+	.details-movie-detail {
+		width: 100%;
+	}
+	.details-movie-detail .title {
+		font-size: 26px;
+	}
+	.details-movie-detail .description p,
+	.details-movie-detail .other-movie-info p,
+	.details-movie-detail .more-details p {
+		font-size: 14px;
+	}
+	.details-movie-detail .reviews .imdb-review {
+		width: 110px;
+		height: 110px;
+	}
+	.details-movie-detail .reviews .imdb-review .imdb-score {
+		font-size: 35px;
+	}
+	.details-movie-detail .reviews .imdb-review .imdb-score-text {
+		font-size: 18px;
+	}
+	.details-movie-detail .reviews .other-reviews {
+		width: calc(100% - 110px);
+	}
+	.details-movie-detail .reviews .other-reviews .other-score div h1 {
+		font-size: 20px;
+	}
+	.details-movie-detail .reviews .other-reviews .other-score div p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.movie-trailer {
+		padding: 0;
+	}
+	.poster-movie-detail {
+		width: 200px;
+	}
+	.details-movie-detail .reviews {
+		flex-direction: column;
+		align-items: center;
+	}
+	.details-movie-detail .reviews .imdb-review {
+		height: 75px;
+		width: 100%;
+	}
+	.details-movie-detail .reviews .other-reviews {
+		padding: 10px 0;
+		width: 100%;
+	}
+
+	.details-movie-detail .reviews .other-reviews .other-score {
+		gap: 10px;
+	}
+	.details-movie-detail .reviews .imdb-review .imdb-score {
+		font-size: 32px;
+	}
+	.details-movie-detail .reviews .other-reviews .other-score div {
+		margin: 0;
+	}
+}

@@ -1,0 +1,219 @@
+/* ==== Navbar ==== */
+.navbar {
+	background-color: var(--bgc);
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	transition: var(--trans);
+	font-family: "Poppins", sans-serif;
+}
+
+/* ==== Navbar Logo==== */
+.navbar h1 {
+	font-size: 2.2em;
+	color: var(--text-color);
+	cursor: pointer;
+}
+
+.top-left {
+	display: flex;
+	align-items: center;
+}
+
+/* ==== Navbar search bar ==== */
+.navbar .search-bar {
+	max-width: 350px;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: var(--bgc-light);
+	transition: var(--trans);
+	position: relative;
+}
+
+.navbar .search-bar button {
+	all: unset;
+}
+.navbar .search-bar i {
+	padding: 8px 12px;
+	font-size: 1.5em;
+	color: var(--text-color);
+	cursor: pointer;
+}
+
+.search-bar .input {
+	width: 100%;
+	height: 100%;
+	padding: 0 5px;
+	display: flex;
+	align-items: center;
+}
+.search-bar .input input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	color: var(--text-color);
+	border-radius: 6px;
+	font-size: 18px;
+	font-weight: 500;
+	transition: var(--trans);
+	background-color: var(--bgc-light);
+}
+
+.navbar .search-bar span {
+	width: 40px;
+	height: 25px;
+	position: relative;
+	cursor: pointer;
+}
+
+.navbar .search-bar span::before,
+.navbar .search-bar span::after {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 2.5px;
+	background-color: var(--text-color);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 6px;
+}
+
+.navbar .search-bar span::before {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navbar .search-bar span::after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mode {
+	width: 165px;
+	height: 100%;
+	background-color: var(--bgc-light);
+	border-radius: 6px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: var(--trans);
+}
+
+.mode-text {
+	color: var(--text-color);
+	font-family: "Poppins";
+	font-weight: 500;
+}
+
+.toggle-switch {
+	position: relative;
+	border-radius: 25px;
+	width: 45px;
+	height: 22.5px;
+	background-color: var(--text-color);
+	cursor: pointer;
+}
+
+.switch::before {
+	content: "";
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	background-color: var(--bgc);
+	transition: var(--trans);
+}
+
+body.dark .switch::before {
+	left: 25px;
+}
+
+/* TODO ==== Breakdown Handler ==== */
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		height: 55px;
+	}
+
+	.navbar h1 {
+		font-size: 1.8em;
+	}
+
+	.navbar .search-bar i {
+		padding: 4px 8px;
+	}
+	.search-bar .input input {
+		font-size: 16px;
+	}
+	.navbar .search-bar span {
+		padding: 0 25px;
+	}
+
+	.mode {
+		width: fit-content;
+	}
+	.mode-text {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.navbar {
+		padding: 5px 15px;
+	}
+	.navbar h1 {
+		font-size: 1.3em;
+	}
+	.navbar .search-bar {
+		width: 50%;
+	}
+	.navbar .search-bar i {
+		padding: 4px 6px;
+		font-size: 1.2em;
+	}
+
+	.search-bar .input input {
+		font-size: 14px;
+	}
+	.navbar .search-bar span {
+		padding: 5px;
+		margin-left: 0;
+	}
+	.navbar .search-bar span::before,
+	.navbar .search-bar span::after {
+		width: 15px;
+	}
+
+	.mode {
+		padding: 6px;
+		width: 50px;
+	}
+
+	.toggle-switch {
+		height: 20px;
+	}
+
+	.switch::before {
+		height: 13px;
+		width: 13px;
+	}
+	body.dark .switch::before {
+		left: 20px;
+	}
+}

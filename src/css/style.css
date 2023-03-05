@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins";
+}
+
+:root {
+	--body-color: #e4e9f7;
+	--bgc: #011627;
+	--button-hover-color: #f4f3ee;
+	--bgc-light: #042947;
+	--toggle-color: #f4f3ee;
+	--text-color: #fff;
+	--gold-color: #ffd117;
+	--trans: all 0.3s ease;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--body-color);
+	transition: var(--trans);
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+::selection {
+	background-color: #284b63;
+	color: #fff;
+}
+
+::placeholder {
+	color: var(--text-color);
+}
+
+body.dark {
+	--body-color: #18191a;
+	--bgc: #242526;
+	--button-hover-color: #3a3b3c;
+	--bgc-light: #3a3b3c;
+	--toggle-color: #fff;
+	--text-color: #dddddd;
+}
+
+.loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@-webkit-keyframes honeycomb {
+	0%,
+	20%,
+	80%,
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	30%,
+	70% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes honeycomb {
+	0%,
+	20%,
+	80%,
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+
+	30%,
+	70% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+.honeycomb {
+	height: 24px;
+	position: relative;
+	width: 24px;
+}
+
+.honeycomb div {
+	-webkit-animation: honeycomb 2.1s infinite backwards;
+	animation: honeycomb 2.1s infinite backwards;
+	background: var(--bgc);
+	height: 12px;
+	margin-top: 6px;
+	position: absolute;
+	width: 24px;
+}
+
+.honeycomb div:after,
+.honeycomb div:before {
+	content: "";
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.honeycomb div:after {
+	top: -6px;
+	border-bottom: 6px solid var(--bgc);
+}
+
+.honeycomb div:before {
+	bottom: -6px;
+	border-top: 6px solid var(--bgc);
+}
+
+.honeycomb div:nth-child(1) {
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+	left: -28px;
+	top: 0;
+}
+
+.honeycomb div:nth-child(2) {
+	-webkit-animation-delay: 0.1s;
+	animation-delay: 0.1s;
+	left: -14px;
+	top: 22px;
+}
+
+.honeycomb div:nth-child(3) {
+	-webkit-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+	left: 14px;
+	top: 22px;
+}
+
+.honeycomb div:nth-child(4) {
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+	left: 28px;
+	top: 0;
+}
+
+.honeycomb div:nth-child(5) {
+	-webkit-animation-delay: 0.4s;
+	animation-delay: 0.4s;
+	left: 14px;
+	top: -22px;
+}
+
+.honeycomb div:nth-child(6) {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+	left: -14px;
+	top: -22px;
+}
+
+.honeycomb div:nth-child(7) {
+	-webkit-animation-delay: 0.6s;
+	animation-delay: 0.6s;
+	left: 0;
+	top: 0;
+}
+
+body.dark .honeycomb div {
+	background-color: var(--text-color);
+}
+
+body.dark .honeycomb div:after {
+	border-bottom: 6px solid var(--text-color);
+}
+
+body.dark .honeycomb div:before {
+	border-top: 6px solid var(--text-color);
+}

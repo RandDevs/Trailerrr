@@ -1,0 +1,212 @@
+/*  ==== Sidebar ==== */
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: calc(100% - 10vh);
+	max-width: 250px;
+	width: 18.5%;
+	/* min-width: 170px; */
+	padding: 10px 14px;
+	background: var(--bgc);
+	transition: var(--trans);
+	z-index: 100;
+	font-family: "Poppins", sans-serif;
+	margin-top: 10vh;
+}
+
+.sidebar.close {
+	width: 88px;
+}
+
+/*  ==== Menubar ==== */
+.sidebar .menu-bar {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+	display: none;
+}
+
+.menu {
+	width: 100%;
+	height: 52.51%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.menu-links {
+	width: 100%;
+	height: 100%;
+}
+.sidebar li {
+	height: 16.66%;
+	/* height: 50px; */
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar li:not(.mode) {
+	margin-top: 10px;
+}
+
+.sidebar .icon {
+	min-width: 60px;
+	border-radius: 6px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+	color: var(--text-color);
+	transition: var(--trans);
+}
+
+.sidebar .text {
+	font-size: 17px;
+	font-weight: 500;
+	white-space: nowrap;
+	opacity: 1;
+}
+
+.sidebar.close .text {
+	opacity: 0;
+}
+
+.sidebar li.search-box {
+	border-radius: 6px;
+	background-color: var(--bgc-light);
+	cursor: pointer;
+	transition: var(--trans);
+}
+
+.sidebar li.search-box input {
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	background-color: var(--bgc-light);
+	color: var(--text-color);
+	border-radius: 6px;
+	font-size: 17px;
+	font-weight: 500;
+	transition: var(--trans);
+	padding-right: 25px;
+}
+
+.sidebar li a {
+	list-style: none;
+	height: 100%;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: var(--trans);
+}
+
+.sidebar li a:hover {
+	background-color: var(--button-hover-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+	color: var(--bgc);
+}
+
+/* ==== Toggle Dark Mode ==== */
+.sidebar .menu-bar .bottom-content {
+	width: 100%;
+	height: 9%;
+}
+.sidebar .menu-bar .mode {
+	border-radius: 6px;
+	background-color: var(--bgc-light);
+	position: relative;
+	transition: var(--trans);
+	width: 100%;
+	height: 100%;
+}
+
+.menu-bar .mode .sun-moon {
+	height: 50px;
+	width: 60px;
+}
+
+.mode .sun-moon i {
+	color: var(--text-color);
+	position: absolute;
+}
+
+.mode .text {
+	color: var(--text-color);
+}
+
+.mode .sun-moon i.sun {
+	opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	min-width: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+.toggle-switch .switch {
+	position: relative;
+	height: 22px;
+	width: 40px;
+	border-radius: 25px;
+	background-color: var(--toggle-color);
+	transition: var(--trans);
+}
+
+.switch::before {
+	content: "";
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	background-color: var(--bgc);
+	transition: var(--trans);
+}
+
+/* * ==== Dark Mode ==== */
+/* Menubar */
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+	color: var(--text-color);
+}
+
+/* ==== Toggle Dark Mode */
+body.dark .mode .sun-moon i.sun {
+	opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+	opacity: 0;
+}
+body.dark .switch::before {
+	left: 20px;
+}
