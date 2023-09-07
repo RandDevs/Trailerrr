@@ -6,7 +6,7 @@ Welcome to Trailerrr, your one-stop destination for finding and watching movie t
 
 ### 1. Explore Recommended Movies
 
-- On the home page, discover a curated selection of recommended movies.
+- Discover a curated selection of recommended movies.
 - Click on any movie poster to instantly watch its trailer.
 - A great way to find new films and stay updated with the latest releases.
 
